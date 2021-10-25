@@ -1,17 +1,18 @@
 {
-  "name": "new-world-queue",
+  "name": "hubot",
   "version": "1.0.0",
-  "description": "Display queue length and player count for New World servers.",
+  "description": "Discord bot for The Hub community.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "lint": "eslint --fix --ext .js"
   },
-  "author": "",
+  "author": "tljoshh (Joshua Potter)",
   "license": "ISC",
   "dependencies": {
     "@discordjs/builders": "^0.7.0",
     "@discordjs/rest": "0.1.0-canary.0",
-    "axios": "^0.23.0",
     "discord-api-types": "^0.24.0",
     "discord.js": "^13.2.0"
   },

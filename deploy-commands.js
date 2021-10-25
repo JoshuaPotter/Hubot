@@ -1,5 +1,8 @@
-// This file registers commands for the bot.
-// You only need to run node deploy-commands.js once. You should only run it again if you add or edit existing commands.
+/**
+ * This file registers commands for the bot.
+ * Commands are loaded dynamically from the commands/ directory and registered individually.
+ * Instructions: You only need to run node deploy-commands.js once. You should only run it again if you add or edit existing commands.
+ */
 const fs = require('fs');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
@@ -9,12 +12,14 @@ const commands = [];
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
+	// Skip example file
+	if (file === '_example.js') return;
+
 	const command = require(`./commands/${file}`);
 	commands.push(command.data.toJSON());
 }
 
 const rest = new REST({ version: '9' }).setToken(token);
-
 
 (async () => {
 	try {
@@ -26,7 +31,8 @@ const rest = new REST({ version: '9' }).setToken(token);
 		);
 
 		console.log('Successfully reloaded application (/) commands.');
-	} catch (error) {
+	}
+	catch (error) {
 		console.error(error);
 	}
 })();
