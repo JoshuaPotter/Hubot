@@ -1,6 +1,6 @@
 /**
  * This file adds a user's ID to the database when they leave the server.
- * https://discord.js.org/#/docs/main/stable/class/GuildMember
+ * https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-guildMemberRemove
  */
 const { User } = require('../db-objects');
 
