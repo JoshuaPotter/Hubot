@@ -1,5 +1,6 @@
 /**
- * This file parses and executes user commands.
+ * This file parses and executes user slash commands.
+ * Make sure deploy-commands.js has been run at least once.
  */
 module.exports = {
 	name: 'interactionCreate',

@@ -13,13 +13,6 @@ const sequelize = new Sequelize(database, user, password, {
 	dialect: 'mysql',
 });
 
-// Test connection
-try {
-	sequelize.authenticate();
-} catch (error) {
-	console.error('Unable to connect to the database:', error);
-}
-
 require('./models/User.js')(sequelize, Sequelize.DataTypes);
 
 const force = process.argv.includes('--force') || process.argv.includes('-f');

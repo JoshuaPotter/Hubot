@@ -18,7 +18,7 @@ module.exports = {
 
 		// Add role
 		const roleId = '';
-		member.roles.add(roleId);
+		await member.roles.add(roleId);
 
 		// Delete user from db
 		await User.destroy({
