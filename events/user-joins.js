@@ -16,13 +16,17 @@ module.exports = {
 		// User is not a former member of the server.
 		if (user === null) return;
 
-		// Add role
-		const roleId = '';
-		await member.roles.add(roleId);
+		try {
+			// Add role
+			const roleId = '902331369726828624';
+			await member.roles.add(roleId);
 
-		// Delete user from db
-		await User.destroy({
-			where: { user_id: id },
-		});
+			// Delete user from db
+			await User.destroy({
+				where: { user_id: id },
+			});
+		} catch (error) {
+			console.log(error);
+		}
 	},
 };

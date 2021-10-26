@@ -6,6 +6,6 @@ module.exports = {
 	once: true,
 	execute(client) {
 		console.log(`Ready! Logged in as ${client.user.tag}`);
-		client.user.setActivity('activity', { type: 'WATCHING' });
+		client.user.setActivity('The Hub', { type: 'WATCHING' });
 	},
 };

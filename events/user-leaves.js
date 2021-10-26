@@ -9,7 +9,11 @@ module.exports = {
 	async execute(member) {
 		const { id } = member;
 
+		try {
 		// Add user_id to database
 		await User.create({ user_id: id });
+		} catch(error) {
+			console.log(error);
+		}
 	},
 };
