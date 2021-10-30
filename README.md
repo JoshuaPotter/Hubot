@@ -4,6 +4,9 @@
 - Node
 - Docker (optional for local testing)
 
+## Config
+Rename `config-sample.json` to `config.json`. Both `token` and `clientId` come from the Discord application. `storage` is for database connection information.
+
 ## Database
 Connects to MySQL database using Sequelize ORM. Models are stored in `models/`.
 To initialize the database, run `node db-init.js` once. This will also need to be run whenever models are edited or new models are added to ensure tables are added.
