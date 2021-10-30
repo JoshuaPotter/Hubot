@@ -1,0 +1,10 @@
+{
+    "token": "",
+	"clientId": "",
+    "storage": {
+        "host": "",
+        "database": "",
+        "user": "",
+        "password": ""
+    }
+}
